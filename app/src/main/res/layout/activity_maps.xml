@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+
+<LinearLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:weightSum="1">
+
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="185dp"
+            android:layout_gravity="right"
+            android:id="@+id/TFaddress" />
+
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="82dp"
+            android:id="@+id/SearchButton"
+            android:onClick="onSearch"
+            android:text="Search" />
+
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="103dp"
+            android:id="@+id/changeM"
+            android:onClick="changeMap"
+            android:text="MapType"
+            style="?android:attr/buttonStyleSmall" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:weightSum="1">
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="339dp"
+            android:layout_height="263dp"
+            tools:context="com.example.c65317.dogtracker.MapsActivity" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content">
+
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/zoomIn"
+                android:onClick="zoomPressed"
+                android:text="^"
+                style="?android:attr/buttonStyleSmall" />
+
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/zoomOut"
+                android:onClick="zoomPressed"
+                android:text="V"
+                style="?android:attr/buttonStyleSmall" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
